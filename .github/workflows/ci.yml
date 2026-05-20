@@ -38,12 +38,9 @@ jobs:
       - name: Test
         run: make test
 
-      - name: Rebuild Image for Trivy
-        run: docker build -t promtools:${{ github.sha }} .
-
       - name: Trivy Scan
         uses: aquasecurity/trivy-action@v0.36.0
         with:
-          image-ref: promtools:${{ github.sha }}
+          image-ref: promtools:latest
           scanners: vuln
           trivy-config: trivy.yaml
