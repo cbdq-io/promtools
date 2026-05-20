@@ -7,6 +7,7 @@ all: lint build clean test
 
 build:
 	docker compose build
+	docker build --build-arg PROM_VERSION=${PROM_VERSION} -t promtools:${TAG} .
 
 changelog:
 	docker run --quiet --rm --volume "${PWD}:/mnt/source" --workdir /mnt/source ghcr.io/cbdq-io/gitchangelog > CHANGELOG.md
