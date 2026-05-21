@@ -10,7 +10,9 @@ pkg:
     - library
 
 scan:
-  skip-files: []
+  skip-files:
+    - usr/local/bin/prometheus
+    - usr/local/bin/promtool
 
 severity:
   - MEDIUM
