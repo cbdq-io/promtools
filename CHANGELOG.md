@@ -27,4 +27,8 @@
 
 * Add dev container. [Jim Loughlin]
 
+### Continuous Integration
+
+* Fix Git Flow GitHub workflow. [Ben Dalling]
+
 
