@@ -26,6 +26,10 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: Retrieve Release Candidate Name
+        id: version
+        run: echo "RELEASE_CANDIDATE_TAG=$( make tag )" >> $GITHUB_OUTPUT
+
       - name: Git Flow Action
         uses: cbdq-io/gitflow-action@v1
         env:
