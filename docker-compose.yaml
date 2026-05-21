@@ -1,0 +1,39 @@
+---
+services:
+  prom2logs:
+    build:
+      args:
+        PROM_VERSION: "${PROM_VERSION}"
+      context: .
+    container_name: prom2logs
+    entrypoint: /usr/local/bin/prom2logs.py
+    environment:
+      LOG_LEVEL: DEBUG
+      METRIC_REGEX_LIST: "^prometheus_"
+      PROM_API_ENDPOINT: http://prometheus:9090/api/v1
+    image: prom2logs:latest
+    ports:
+      - 8000:8000
+  prometheus:
+    build:
+      args:
+        PROM_VERSION: "${PROM_VERSION}"
+      context: .
+    container_name: prometheus
+    entrypoint: /entrypoint.sh
+    environment:
+      RANGE: ${ADDRESS_RANGE:-10.86.0}
+      RANGE_START: ${START:-4}
+      RANGE_END: ${END:-30}
+      PORT_START: ${PORT_START:-8000}
+      PORT_END: ${PORT_END:-8002}
+      OUTFILE: ${OUTFILE:-/etc/prometheus/targets.json}
+    healthcheck:
+      test: wget -qO /dev/null localhost:9090/metrics
+      interval: 1m
+      timeout: 30s
+      retries: 3
+      start_period: 5s
+    image: prom2logs:latest
+    ports:
+      - 9090:9090
