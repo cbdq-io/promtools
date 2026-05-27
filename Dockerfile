@@ -24,17 +24,6 @@ RUN adduser \
   && mkdir /data \
   && chown promtools:promtools /data
 
-COPY --chmod=755 --chown=root:root prom2logs.py /usr/local/bin/prom2logs.py
-
-# Copy custom config file
-COPY prometheus.yml /etc/prometheus/prometheus.yml
-
-# Copy custom entrypoint script
-COPY --chmod=755 entrypoint.sh /entrypoint.sh
-
-# Copy custom generate_targets.sh script
-COPY --chmod=755 generate_targets.sh /generate_targets.sh
-
 COPY --chown=root:root --from=downloader \
     /prometheus-${PROM_VERSION}.linux-amd64/prometheus \
     /usr/local/bin/prometheus
@@ -49,5 +38,16 @@ COPY --chown=root:root --from=downloader \
 
 RUN mkdir -p /var/lib/prometheus && \
     chown -R promtools:promtools /var/lib/prometheus /etc/prometheus
+
+COPY --chmod=755 --chown=root:root prom2logs.py /usr/local/bin/prom2logs.py
+
+# Copy custom config file
+COPY --chown=promtools:promtools prometheus.yml /etc/prometheus/prometheus.yml
+
+# Copy custom entrypoint script
+COPY --chmod=755 entrypoint.sh /entrypoint.sh
+
+# Copy custom generate_targets.sh script
+COPY --chmod=755 generate_targets.sh /generate_targets.sh
 
 USER promtools
