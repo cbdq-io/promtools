@@ -1,7 +1,7 @@
 .EXPORT_ALL_VARIABLES:
 
-PROM_VERSION = 3.11.3
-TAG = 0.1.1
+PROM_VERSION = 3.12.0
+TAG = 1.0.0
 
 all: lint build clean test
 
