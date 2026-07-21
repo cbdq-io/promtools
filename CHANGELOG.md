@@ -1,6 +1,13 @@
 # Changelog
 
 
+## Unreleased
+
+### Build
+
+* Bump Prometheus version from 3.12.0 to 3.13.1. [Ben Dalling]
+
+
 ## 1.0.0 (2026-06-30)
 
 ### Fix
