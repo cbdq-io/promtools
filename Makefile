@@ -1,7 +1,9 @@
 .EXPORT_ALL_VARIABLES:
 
-PROM_VERSION = 3.13.1
-TAG = 1.0.1
+# The latest Prometheus tag can be found at <https://github.com/prometheus/prometheus/releases>
+# choose the latest and avoid pre-releases.
+PROM_VERSION = 3.13.2
+TAG = 1.0.2
 
 all: lint build clean test
 

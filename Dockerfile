@@ -50,4 +50,4 @@ COPY --chmod=755 entrypoint.sh /entrypoint.sh
 # Copy custom generate_targets.sh script
 COPY --chmod=755 generate_targets.sh /generate_targets.sh
 
-USER promtools
+USER 1000
