@@ -1,6 +1,23 @@
 # Changelog
 
 
+## 1.0.2 (2026-08-12)
+
+### Fix
+
+* Acknowledge vulnerabilities in the base image. [Ben Dalling]
+
+* Hadolint prefers UID over user name in Dockerfile. [Ben Dalling]
+
+* Add basic instructions for creating a release. [Ben Dalling]
+
+### Build
+
+* Prometheus 3.14.0 is pre-release, using 3.13.2 instead. [Ben Dalling]
+
+* Bump Prometheus image from 3.13.1 to 3.14.0. [Ben Dalling]
+
+
 ## 1.0.1 (2026-07-21)
 
 ### Build
