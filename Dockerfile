@@ -14,7 +14,10 @@ ARG PROM_VERSION
 
 ENV PROM_VERSION=${PROM_VERSION}
 
-RUN adduser \
+RUN apk update \
+  && apk upgrade sqlite-libs \
+  && apk cache clean \
+  && adduser \
     -h /home/promtools \
     -g "App User" \
     -s /sbin/nologin \
