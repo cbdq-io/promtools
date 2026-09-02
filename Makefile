@@ -3,7 +3,7 @@
 # The latest Prometheus tag can be found at <https://github.com/prometheus/prometheus/releases>
 # choose the latest and avoid pre-releases.
 PROM_VERSION = 3.13.2
-TAG = 1.0.2
+TAG = 1.0.3
 
 all: lint build clean test
 
