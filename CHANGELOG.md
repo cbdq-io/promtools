@@ -5,6 +5,32 @@
 
 ### Fix
 
+* Skip GitFlow and changelog workflows for dependabot PRs. [Ben Dalling]
+
+* Resolve CVE-2026-11822 and CVE-2026-11824. [Ben Dalling]
+
+### Build
+
+* Bump cbdq-io/gitflow-action from 1.0.6 to 1.0.7. [dependabot[bot]]
+
+  Bumps [cbdq-io/gitflow-action](https://github.com/cbdq-io/gitflow-action) from 1.0.6 to 1.0.7.
+  - [Release notes](https://github.com/cbdq-io/gitflow-action/releases)
+  - [Changelog](https://github.com/cbdq-io/gitflow-action/blob/develop/CHANGELOG.md)
+  - [Commits](https://github.com/cbdq-io/gitflow-action/compare/1.0.6...1.0.7)
+
+  ---
+  updated-dependencies:
+  - dependency-name: cbdq-io/gitflow-action
+    dependency-version: 1.0.7
+    dependency-type: direct:production
+    update-type: version-update:semver-patch
+  ...
+
+
+## 1.0.2 (2026-08-12)
+
+### Fix
+
 * Acknowledge vulnerabilities in the base image. [Ben Dalling]
 
 * Hadolint prefers UID over user name in Dockerfile. [Ben Dalling]
