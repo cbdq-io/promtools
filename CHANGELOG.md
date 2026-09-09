@@ -1,6 +1,13 @@
 # Changelog
 
 
+## Unreleased
+
+### Fix
+
+* Add vulnerabilities found in the base image to Trivy ignore. [Ben Dalling]
+
+
 ## 1.0.3 (2026-09-02)
 
 ### Fix
