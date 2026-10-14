@@ -1,4 +1,4 @@
-FROM alpine:3.23 AS downloader
+FROM alpine:3.24 AS downloader
 
 ARG PROM_VERSION
 
@@ -8,7 +8,7 @@ RUN apk add --no-cache wget tar
 RUN wget -q https://github.com/prometheus/prometheus/releases/download/v${PROM_VERSION}/prometheus-${PROM_VERSION}.linux-amd64.tar.gz && \
     tar xzf prometheus-${PROM_VERSION}.linux-amd64.tar.gz
 
-FROM python:3.14-alpine3.23
+FROM python:3.14-alpine3.24
 
 ARG PROM_VERSION
 
