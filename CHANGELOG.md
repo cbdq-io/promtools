@@ -5,6 +5,17 @@
 
 ### Fix
 
+* Bump Alpine from 3.23 to 3.24. [Ben Dalling]
+
+* Resolve CVE-2026-85091. [Ben Dalling]
+
+* Bump Prometheus version from 3.13.2 to 3.13.4. [Ben Dalling]
+
+
+## 1.0.4 (2026-09-23)
+
+### Fix
+
 * Add vulnerabilities found in the base image to Trivy ignore. [Ben Dalling]
 
 ### Build
