@@ -1,6 +1,13 @@
 # Changelog
 
 
+## Unreleased
+
+### Fix
+
+* Release/1.0.6. [James Loughlin]
+
+
 ## 1.0.5 (2026-10-14)
 
 ### Fix
