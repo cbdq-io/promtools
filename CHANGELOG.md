@@ -5,6 +5,17 @@
 
 ### Fix
 
+* Exempted CVE-2026-114613 in .trivyignore with justification. [Jim Loughlin]
+
+* Upgraded devcontainer to bookworm. [Jim Loughlin]
+
+* Release/1.0.6. [James Loughlin]
+
+
+## 1.0.5 (2026-10-14)
+
+### Fix
+
 * Bump Alpine from 3.23 to 3.24. [Ben Dalling]
 
 * Resolve CVE-2026-85091. [Ben Dalling]
