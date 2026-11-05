@@ -1,6 +1,17 @@
 # Changelog
 
 
+## 1.0.6 (2026-11-05)
+
+### Fix
+
+* Exempted CVE-2026-114613 in .trivyignore with justification. [Jim Loughlin]
+
+* Upgraded devcontainer to bookworm. [Jim Loughlin]
+
+* Release/1.0.6. [James Loughlin]
+
+
 ## 1.0.5 (2026-10-14)
 
 ### Fix
