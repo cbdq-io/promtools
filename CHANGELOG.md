@@ -5,6 +5,10 @@
 
 ### Fix
 
+* Exempted CVE-2026-114613 in .trivyignore with justification. [Jim Loughlin]
+
+* Upgraded devcontainer to bookworm. [Jim Loughlin]
+
 * Release/1.0.6. [James Loughlin]
 
 
