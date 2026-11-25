@@ -15,7 +15,7 @@ ARG PROM_VERSION
 ENV PROM_VERSION=${PROM_VERSION}
 
 RUN apk update \
-  && apk upgrade sqlite-libs zlib \
+  && apk upgrade sqlite-libs zlib libcrypto3 libssl3 \
   && apk cache clean \
   && adduser \
     -h /home/promtools \
